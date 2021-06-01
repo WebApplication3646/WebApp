@@ -119,7 +119,111 @@
 </div>
 </div>
 <!--banner end here-->
-	
+	<!-- Modal2 -->
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
+														<div class="modal-dialog">
+														<!-- Modal content-->
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal">&times;</button>
+																	
+																	<div class="signin-form profile">
+																	<h3 class="agileinfo_sign">Login</h3>	
+																			<div class="login-form">
+																				<form action="LoginServlet" >
+																					<input type="email" name="un" placeholder="E-mail" required="">
+																					<input type="password" name="pw" placeholder="Password" required="">
+																					<div class="tp">
+																						<input type="submit" name="submit" value="Login">
+																					</div>
+																				</form>
+																			</div>
+																			<div class="login-social-grids">
+																				
+																			</div>
+																			<p><a href="#" data-toggle="modal" data-target="#myModal3" > Don't have an account?</a></p>
+																		</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<!-- //Modal2 -->	
+													<!-- Modal3 -->
+													<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
+														<div class="modal-dialog">
+														<!-- Modal content-->
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal">&times;</button>
+																	
+																	<div class="signin-form profile">
+																	<h3 class="agileinfo_sign">Register</h3>
+                                                                                                                                        
+  <%
+        
+ if(request.getParameter("submit") !=null){
+
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost/csc506database","root","");
+Statement st=con.createStatement();
+  String name = request.getParameter("name");
+  String email = request.getParameter("email");
+  String phone = request.getParameter("phone");
+  String address = request.getParameter("address");
+  String pasword = request.getParameter("password");
+  
+String strQuery = "SELECT COUNT(*) FROM registrationform where email='"+email+"'";
+ResultSet rs = st.executeQuery(strQuery);
+rs.next();
+String Countrow = rs.getString(1);
+if(Countrow.equals("0")){
+int i=st.executeUpdate("insert into registrationform(`name`, `email`, `phone`, `address`, `password`)values('"+name+"','"+email+"','"+phone+"','"+address+"','"+pasword+"')");
+ %> 
+
+  <script>
+               alert("Successfully Registered!");
+       </script>
+              
+<%
+  }
+
+         
+else{
+ %> 
+    <script>
+               alert("User name or Email Incorrect !");
+       </script>
+<%     
+}
+         }
+%>
+    
+    
+
+                                                                                                                                        
+                                                                                                                                        
+                                                                                                                                        
+                                                                                                                                        
+                                                                                                                                        
+																			<div class="login-form">
+																				<form action="#" method="post">
+																				   <input type="text" name="name" placeholder="Name" required="">
+																					<input type="email" name="email" placeholder="Email" required="">
+                                                                                                                                                                        <input type="text" name="phone" placeholder="Phone Number" required="">
+                                                                                                                                                                        <input type="text" name="address" placeholder="Address" required="">
+																					<input type="password" name="password" placeholder="Password" required="">
+																					
+                                                                                                                                                                        <input type="submit" name="submit" value="Register">
+																				</form>
+																			</div>
+																			<p><a href="#"> By clicking register, I agree to your terms</a></p>
+																		</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+		<!-- //Modal3 -->
 <!--banner bottom-->
 <div class="banner-btm-w3layouts" id="about">
 	<div class="container">
