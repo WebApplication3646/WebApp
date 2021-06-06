@@ -121,6 +121,7 @@
 </div>
 <!--banner end here-->
 	<!-- Modal2 -->
+	<!-- mustaching with servelet -->
 		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
 														<div class="modal-dialog">
 														<!-- Modal content-->
