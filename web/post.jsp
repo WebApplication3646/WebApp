@@ -81,6 +81,16 @@
       </div>
     </nav>
     <!-- Header -->
+     </a>
+              <div class="dropdown-menu  dropdown-menu-right ">
+                <div class="dropdown-header noti-title">
+                  <h6 class="text-overflow m-0">Welcome!</h6>
+                </div>
+                <a href="profile.jsp" class="dropdown-item">
+                  <i class="ni ni-single-02"></i>
+                  <span>My profile</span>
+                </a>
+   
     <!-- Header -->
     <div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(./assets/img/theme/profile-cover.jpg); background-size: cover; background-position: center top;">
       <!-- Mask -->
