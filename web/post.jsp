@@ -102,12 +102,42 @@
             <div class="card-body">
                 
                 
-                 
+                             <%
+        if(request.getParameter("submit") !=null){
+            
+         
+            String post = request.getParameter("post");
+             String name = request.getParameter("name");
+         
+          
+            
+            Connection con;
+            PreparedStatement pst;
+            ResultSet rs;  
                                                     
              Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/csc506database","root","");
             pst = con.prepareStatement("INSERT INTO `csc506database`.`comment` (`post`, `name`) VALUES (?, ?);");      
-                
+               
+             
+                  pst.setString(1, post);
+            pst.setString(2, name);
+        
+            
+            
+            
+            pst.executeUpdate();
+            
+            %>
+           <script>
+               alert("Posted");
+           </script>
+        
+            <%
+        }
+    
+    
+    %>
                 
                 
              
