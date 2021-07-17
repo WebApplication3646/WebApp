@@ -98,6 +98,31 @@
       </div>
     </div>
     <!-- Page content -->
+   
+           <div class="container-fluid mt--6">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2">
+          <div class="card card-profile">
+            <img src="./assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder" class="card-img-top">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+               
+              </div>
+            </div>
+         
+        
+          </div>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Make Post </h3>
+                </div>
+               
+              </div>
+            </div>
     
             <div class="card-body">
                 
