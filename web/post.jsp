@@ -111,6 +111,31 @@
                 
                 
              
+             
+                
+              <form>
+                <h6 class="heading-small text-muted mb-4">Post/Comment</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-username">Name</label>
+                        <input type="text" id="input-username" class="form-control" placeholder="Username" name="name">
+                      </div>
+                    </div>
+                      
+                        <div class="col-md-9">
+                     <textarea name="post" placeholder="Write Comment..." >  </textarea>
+                  </div>
+                   
+                 
+                       <div class="col-4 text-right">
+                           <center>  <button type="submit" class="btn btn-sm btn-primary" name="submit">Post</button></center>
+                </div>
+                <hr class="my-4" />
+              
+              </form>
+             
             </div>
           </div>
         </div>
