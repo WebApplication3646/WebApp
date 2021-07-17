@@ -119,6 +119,17 @@
                
               </div>
             </div>
+           
+           <div class="col-xl-8 order-xl-1">
+          <div class="card">
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">Make Post </h3>
+                </div>
+               
+              </div>
+            </div>
          
         
           </div>
